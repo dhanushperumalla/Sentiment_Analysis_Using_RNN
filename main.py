@@ -30,9 +30,15 @@ import streamlit as st
 # Streamlit app
 st.title('IMDB Movie Review Sentiment Analysis')
 st.write('Enter a movie review to classify it as positive or negative.')
+st.write('Enter at least 120 characters.')
 
 # User input
 user_input = st.text_area('Movie Review')
+
+char_count = len(user_input)
+
+# Display the character count
+st.write(f'Character count: {char_count}')
 
 if st.button('Classify'):
 
